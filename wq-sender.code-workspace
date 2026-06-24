@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "." 
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2,
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.tabSize": 2,
+			"editor.formatOnSave": true
+			
+		},
+		"[php]": {
+			"editor.tabSize": 2,
+			"editor.formatOnSave": true
+		}, 
+		"[json]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.tabSize": 2
+		},
+		
+		// This one forces the tab to be **space**
+		"editor.insertSpaces": true,
+		"restoreTerminals.terminals": [
+			{
+				"splitTerminals": [
+				  {
+					"name": "root",
+					"commands": []
+				  }
+				]
+			},
+		],
+	},
+}
