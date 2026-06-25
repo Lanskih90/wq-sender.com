@@ -87,6 +87,64 @@
     });
   });
 
+  /* ---------- Screenshot lightbox ---------- */
+  var lightbox = document.getElementById("lightbox");
+  if (lightbox) {
+    var lbImg = lightbox.querySelector(".lightbox-img");
+    var lbCap = lightbox.querySelector(".lightbox-cap");
+    var lbClose = lightbox.querySelector(".lightbox-close");
+    var lastFocused = null;
+
+    var openLightbox = function (src, alt, caption) {
+      lastFocused = document.activeElement;
+      lbImg.src = src;
+      lbImg.alt = alt || "";
+      lbCap.textContent = caption || "";
+      lightbox.hidden = false;
+      // force reflow so the opening transition runs
+      void lightbox.offsetWidth;
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      lbClose.focus();
+    };
+
+    var closeLightbox = function () {
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+      var hide = function () {
+        lightbox.hidden = true;
+        lbImg.src = "";
+        lightbox.removeEventListener("transitionend", hide);
+      };
+      lightbox.addEventListener("transitionend", hide);
+      if (lastFocused && typeof lastFocused.focus === "function") {
+        lastFocused.focus();
+      }
+    };
+
+    document.querySelectorAll(".shot-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var shot = btn.closest(".shot");
+        if (shot && shot.classList.contains("is-missing")) return;
+        var img = btn.querySelector("img");
+        var cap = shot ? shot.querySelector(".cap") : null;
+        if (!img) return;
+        openLightbox(img.src, img.alt, cap ? cap.textContent : "");
+      });
+    });
+
+    lbClose.addEventListener("click", closeLightbox);
+
+    // close on backdrop click (but not when clicking the image)
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  }
+
   /* ---------- Current year in footer ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
