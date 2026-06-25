@@ -1317,7 +1317,6 @@ ul {
     grid-template-columns: 1fr;
   }
   .hero-visual {
-    order: -1;
     max-width: 520px;
   }
   .ai-card {
