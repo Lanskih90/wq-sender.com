@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e16"/>
+      <stop offset="1" stop-color="#070a10"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      text { font-family: "Manrope","Inter",Arial,sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- brand -->
+  <g transform="translate(90, 92)">
+    <rect width="64" height="64" rx="16" fill="url(#acc)"/>
+    <path d="M14 31 50 14l-9 36-9.4-14.4L14 31Z" fill="#04150a"/>
+    <text x="84" y="44" font-size="34" font-weight="800" fill="#e8edf5">WQ-Sender</text>
+  </g>
+
+  <!-- headline -->
+  <text x="90" y="290" font-size="72" font-weight="800" fill="#e8edf5">Усі канали спілкування</text>
+  <text x="90" y="372" font-size="72" font-weight="800" fill="url(#acc)">в одному вікні</text>
+
+  <!-- sub -->
+  <text x="92" y="438" font-size="30" font-weight="500" fill="#9aa7bd">Telegram · Instagram · Messenger · WhatsApp</text>
+
+  <!-- channel chips -->
+  <g transform="translate(90, 486)">
+    <rect width="220" height="64" rx="14" fill="#0f1623" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="40" cy="32" r="16" fill="#29a9eb"/>
+    <text x="70" y="41" font-size="24" font-weight="700" fill="#e8edf5">Telegram</text>
+  </g>
+  <g transform="translate(330, 486)">
+    <rect width="230" height="64" rx="14" fill="#0f1623" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="40" cy="32" r="16" fill="#e1306c"/>
+    <text x="70" y="41" font-size="24" font-weight="700" fill="#e8edf5">Instagram</text>
+  </g>
+  <g transform="translate(580, 486)">
+    <rect width="250" height="64" rx="14" fill="#0f1623" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="40" cy="32" r="16" fill="#0084ff"/>
+    <text x="70" y="41" font-size="24" font-weight="700" fill="#e8edf5">Messenger</text>
+  </g>
+  <g transform="translate(850, 486)">
+    <rect width="240" height="64" rx="14" fill="#0f1623" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="40" cy="32" r="16" fill="#25d366"/>
+    <text x="70" y="41" font-size="24" font-weight="700" fill="#e8edf5">WhatsApp</text>
+  </g>
+
+  <!-- domain -->
+  <text x="1110" y="130" text-anchor="end" font-size="26" font-weight="600" fill="#6b7a93">wq-sender.com</text>
+</svg>
