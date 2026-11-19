@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Сторінку не знайдено — WQ-Sender</title>
+  <title>Page not found — WQ-Sender</title>
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#070a10" />
   <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg" />
@@ -16,18 +16,27 @@
 
   <header class="header">
     <div class="container nav">
-      <a href="/" class="brand" aria-label="WQ-Sender — на головну">
+      <a href="/" class="brand" aria-label="WQ-Sender — home">
         <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11.5 21 3l-4.5 18-4.7-7.2L3 11.5Z" fill="currentColor"/></svg></span>
         WQ-Sender
       </a>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Site language">
+          <a href="/" lang="en" hreflang="en" data-lang="en" aria-current="true" title="English">EN</a>
+          <a href="/uk/" lang="uk" hreflang="uk" data-lang="uk" title="Українська">UA</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="container notfound">
     <div>
       <div class="code gradient-text">404</div>
-      <p>Схоже, такої сторінки не існує або її було переміщено.</p>
-      <a href="/" class="btn btn-primary btn-lg">На головну</a>
+      <p>Looks like this page doesn’t exist or has been moved.<br /><span lang="uk">Схоже, такої сторінки не існує або її було переміщено.</span></p>
+      <div class="hero-cta" style="justify-content:center">
+        <a href="/" class="btn btn-primary btn-lg">Go to homepage</a>
+        <a href="/uk/" class="btn btn-ghost btn-lg" lang="uk">На головну</a>
+      </div>
     </div>
   </main>
 
